@@ -8,8 +8,8 @@ import { UpdateContactDto } from './dto/update-contact.dto';
 @Injectable()
 export class ContactsService {
     constructor(private contactsRepository: ContactsRepository) {}
-    async create(createContactDto: CreateContactDto){
-        const contact = await this.contactsRepository.create(createContactDto);
+    async create(createContactDto: CreateContactDto, userId: string){
+        const contact = await this.contactsRepository.create(createContactDto, userId);
 
         return contact
     }

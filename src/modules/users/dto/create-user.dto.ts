@@ -23,7 +23,7 @@ export class CreateUserDto {
     @IsNotEmpty()
     @MinLength(8)
     @Transform(({ value }: { value: string }) => hashSync(value, 10), {
-        groups: ["trasnform"]
+        groups: ["transform"]
     })
     password: string
 

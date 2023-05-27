@@ -4,7 +4,7 @@ import { UpdateContactDto } from "../dto/update-contact.dto"
 import { Contact } from "../entities/contacts.entity"
 
 export abstract class ContactsRepository {
-    abstract create(data: CreateContactDto): Promise<Contact> | Contact
+    abstract create(data: CreateContactDto, userId: string): Promise<Contact> | Contact
     abstract findAll(): Promise<Contact[]> | Contact[]
     abstract findOne(id: string): Promise<Contact> | Contact
     abstract update(id: string, data: UpdateContactDto): Promise<Contact> | Contact
