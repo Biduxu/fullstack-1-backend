@@ -16,8 +16,4 @@ export class CreateContactDto {
     @IsNotEmpty()
     @MinLength(8)
     phone: string
-
-    @IsString()
-    @IsNotEmpty()
-    user_id?: string
 }
