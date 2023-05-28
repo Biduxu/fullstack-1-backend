@@ -23,8 +23,10 @@ export class UsersPrismaRepository implements UsersRepository {
         return plainToInstance(User, newUser)
     }
 
-    async findAll(): Promise<User[]> {
-        const users = await this.prisma.user.findMany()
+    async findYourProfile(id: string): Promise<User> {
+        const users = await this.prisma.user.findUnique({
+            where: {id}
+        })
         return plainToInstance(User, users)
     }
 

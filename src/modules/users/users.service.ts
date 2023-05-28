@@ -19,8 +19,8 @@ export class UsersService {
     return user;
   }
 
-  async findAll() {
-    const users = await this.usersRepository.findAll();
+  async findYourProfile(id: string) {
+    const users = await this.usersRepository.findYourProfile(id);
     return users;
   }
 
