@@ -18,8 +18,8 @@ export class ContactsController {
 
   @Get('')
   @UseGuards(JwtAuthGuard)
-  findAll() {
-    return this.contactsService.findAll();
+  findAll(@Request() req) {
+    return this.contactsService.findAll(req.user.id);
   }
 
   @Get(':id')

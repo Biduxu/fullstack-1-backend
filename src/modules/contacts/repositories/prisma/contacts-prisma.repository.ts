@@ -28,8 +28,10 @@ export class ContactsPrismaRepository implements ContactsRepository {
 
         return newContact
     }
-    async findAll(): Promise<Contact[]> {
-        const contacts = await this.prisma.contact.findMany()
+    async findAll(userId: string): Promise<Contact[]> {
+        const contacts = await this.prisma.contact.findMany({
+            where: {userId}
+        })
 
         return contacts
     }
