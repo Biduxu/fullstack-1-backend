@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { randomUUID } from 'node:crypto';
+import { randomUUID } from "node:crypto"
 
 export class Contact {
     readonly id: string
