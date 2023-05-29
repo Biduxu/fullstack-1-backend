@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
-import { Injectable, NotFoundException, ConflictException } from '@nestjs/common';
-import { CreateUserDto } from './dto/create-user.dto';
-import { UpdateUserDto } from './dto/update-user.dto';
-import { UsersRepository } from './repositories/users.repository';
+import { Injectable, NotFoundException, ConflictException } from "@nestjs/common"
+import { CreateUserDto } from "./dto/create-user.dto"
+import { UpdateUserDto } from "./dto/update-user.dto"
+import { UsersRepository } from "./repositories/users.repository"
 
 @Injectable()
 export class UsersService {
@@ -12,7 +12,7 @@ export class UsersService {
       createUserDto.email,
     );
     if (findUser) {
-      throw new ConflictException('User already exists');
+      throw new ConflictException("User already exists");
     }
     const user = await this.usersRepository.create(createUserDto);
 
@@ -27,7 +27,7 @@ export class UsersService {
   async findOne(id: string) {
     const user = await this.usersRepository.findOne(id);
     if (!user) {
-      throw new NotFoundException('User not found !');
+      throw new NotFoundException("User not found !");
     }
     return user;
   }

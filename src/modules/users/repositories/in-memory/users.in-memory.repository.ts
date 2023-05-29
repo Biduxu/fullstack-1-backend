@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier */
-import { plainToInstance } from 'class-transformer';
-import { CreateUserDto } from '../../dto/create-user.dto';
-import { UpdateUserDto } from '../../dto/update-user.dto';
-import { User } from '../../entities/user.entity';
-import { UsersRepository } from '../users.repository';
+import { plainToInstance } from "class-transformer"
+import { CreateUserDto } from "../../dto/create-user.dto"
+import { UpdateUserDto } from "../../dto/update-user.dto"
+import { User } from "../../entities/user.entity"
+import { UsersRepository } from "../users.repository"
 
 export class UsersInMemoryRepository implements UsersRepository {
     private database: User[] = []

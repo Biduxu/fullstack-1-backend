@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier */
-import { plainToInstance } from 'class-transformer';
-import { CreateContactDto } from '../../dto/create-contact.dto';
-import { UpdateContactDto } from '../../dto/update-contact.dto';
-import { Contact } from '../../entities/contacts.entity';
-import { ContactsRepository } from '../contacts.repository';
+import { plainToInstance } from "class-transformer"
+import { CreateContactDto } from "../../dto/create-contact.dto"
+import { UpdateContactDto } from "../../dto/update-contact.dto"
+import { Contact } from "../../entities/contacts.entity"
+import { ContactsRepository } from "../contacts.repository"
 
 export class ContactsInMemoryRepository implements ContactsRepository {
     private database: Contact[] = []

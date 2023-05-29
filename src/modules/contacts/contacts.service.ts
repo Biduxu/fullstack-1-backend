@@ -1,9 +1,8 @@
 /* eslint-disable prettier/prettier */
-
-import { Injectable } from '@nestjs/common';
-import { ContactsRepository } from './repositories/contacts.repository';
-import { CreateContactDto } from './dto/create-contact.dto';
-import { UpdateContactDto } from './dto/update-contact.dto';
+import { Injectable } from "@nestjs/common"
+import { ContactsRepository } from "./repositories/contacts.repository"
+import { CreateContactDto } from "./dto/create-contact.dto"
+import { UpdateContactDto } from "./dto/update-contact.dto"
 
 @Injectable()
 export class ContactsService {
