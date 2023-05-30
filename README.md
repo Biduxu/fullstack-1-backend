@@ -14,8 +14,6 @@ Crie seu banco de dados e manipule o arquivo .env seguindo o .env.example não e
 
 Para criar as migrações rode o comando: npx prisma migrate dev
 
-Em seguida digite o nome da migração.
-
 Rode a aplicação: yarn start:dev
 
 ## Endpoints:
