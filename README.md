@@ -10,7 +10,7 @@ Faça o clone do repositório em sua máquina
 
 Em seu terminal instale as dependências: yarn
 
-Crie seu banco de dados e manipule o arquivo .env seguindo o .env.examplo
+Crie seu banco de dados e manipule o arquivo .env seguindo o .env.example não esqueça de adicionar uma SECRET_KEY
 
 Para criar as migrações rode o comando: npx prisma migrate dev
 
